@@ -20,7 +20,7 @@ class App extends Component {
       .catch(err => console.log("error found, url not working ", err));
   }
 
-  handleChange = e => this.setState({searchField:e.target.value });
+  handleChange = e => this.setState({ searchField: e.target.value });
 
   render() {
     const { monster, searchField } = this.state;
@@ -29,8 +29,11 @@ class App extends Component {
     );
     return (
       <div className="App">
-        <h1 className='h1'> Monster Rolodex </h1> 
-        <SearchBox placeholder="search monster" handleChange={this.handleChange} />
+        <h1 className="h1"> Monster Rolodex </h1>
+        <SearchBox
+          placeholder="search monster"
+          handleChange={this.handleChange}
+        />
         <CardList monster={filteredMonster} />
       </div>
     );

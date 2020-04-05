@@ -1,9 +1,9 @@
 import React from "react";
-import  { Card } from '../card/card';
+import { Card } from "../card/card";
 
 import "./card-list.css";
 
-export const CardList = (props) => {
+export const CardList = props => {
   return (
     <div className="cardList">
       {props.monster.map(monster => (
